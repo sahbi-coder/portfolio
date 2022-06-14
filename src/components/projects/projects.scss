@@ -75,6 +75,11 @@
             opacity: 0;
             background-color: rgb(89, 178, 86, 0.7);
             width: 95px;
+            a{
+
+              color: white;
+              text-decoration: none;
+            }
           }
           .projects-body-grid-item-link:hover {
             background-color: #59b256;

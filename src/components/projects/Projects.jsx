@@ -14,19 +14,22 @@ function Projects() {
       id: "66dccd6b45fab529c10583c7eabd974c",
       category: "React",
       name: "Watermark app",
-      img:Images.watermark
+      img:Images.watermark,
+      link:'https://github.com/sahbi-coder/watermark-app'
     },
     {
       id: "19f15869ca42ec22e3af68748c358f2e",
       category: "React",
       name: "google drive colone",
-      img:Images.drive
+      img:Images.drive,
+      link:"https://github.com/sahbi-coder/google-drive-clone"
     },
     {
       id: "7abb9ed363c90128d0ddd6d9b687e771",
       category: "React/Node.js",
       name: "e commerce",
-      img:Images.ecommerce
+      img:Images.ecommerce,
+      link:'https://github.com/sahbi-coder/e-commerce-react'
     },
    
   ];
@@ -91,10 +94,10 @@ function Projects() {
           gsap.fromTo(
             elements,
             { opacity: 0, scale: 0 },
-            { opacity: 1, scale: 1, duration: 1 }
+            { opacity: 1, scale: 1, duration: .5 }
           ),
         onLeave: (elements) =>
-          gsap.to(elements, { opacity: 0, scale: 0, duration: 1 }),
+          gsap.to(elements, { opacity: 0, scale: 0, duration: .5 }),
       });
     }
   }, [filteredData]);
@@ -161,7 +164,7 @@ function Projects() {
         <div className="projects-body-grid-item-name">{project.name}</div>
         <div className="projects-body-grid-item-links">
           {/* <div className="projects-body-grid-item-link">demo</div> */}
-          <div className="projects-body-grid-item-link">code</div>
+          <div className="projects-body-grid-item-link"><a href={project.link} target="_blank" >code</a></div>
         </div>
       </div>
     ));
