@@ -1,0 +1,110 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skills {
+  padding: 10px;
+  height: 100vh;
+  width: 100vw;
+  @include flex();
+  justify-content: space-around;
+  .skills-left {
+    flex: 1;
+    height: 60%;
+    max-width: 45%;
+    @include flex();
+    .skills-left-grid {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 5px;
+      .skills-left-gird-item {
+        @include flex-col();
+        text-align: center;
+
+        .skills-left-grid-item-body {
+          height: 60%;
+          width: 60%;
+
+          -webkit-clip-path: polygon(
+            20% 0%,
+            80% 0%,
+            100% 50%,
+            100% 50%,
+            80% 100%,
+            20% 100%,
+            0 50%,
+            0 50%
+          );
+          clip-path: polygon(
+            20% 0%,
+            80% 0%,
+            100% 50%,
+            100% 50%,
+            80% 100%,
+            20% 100%,
+            0 50%,
+            0 50%
+          );
+          background-color: #59b256;
+          @include flex();
+          .mdi-icon {
+            background-color: #59b256;
+            color: white;
+            height: 50%;
+            width: 50%;
+          }
+        }
+        .skills-left-grid-item-catch {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .skills-right {
+    @include flex();
+    position: relative;
+    flex: 1;
+    max-width: 45%;
+    height: 100%;
+    font-size: 48px;
+    
+  }
+}
+/*for mobile*/
+
+@media only screen and(max-width:760px) {
+  .skills {
+    height: 200vh;
+    @include flex-col();
+    justify-content: space-around;
+    .skills-right {
+      @include flex();
+
+      height: 100vh;
+      max-width: 90vw;
+      width: 100%;
+    }
+    .skills-left {
+      @include flex();
+
+      max-width: 90vw;
+      height: 100vh;
+      .skills-left-grid-item-body {
+        height: 50%;
+      }
+    }
+    .skills-right{
+      text-align: center;
+    }
+  }
+}
