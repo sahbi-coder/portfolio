@@ -5,7 +5,7 @@
 }
 .intro {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: white;
 
@@ -107,7 +107,6 @@
       overflow: hidden;
       .intro-img {
         width: 100%;
-        // height: 100%;
         object-fit: cover;
         position: absolute;
         top:50%;
@@ -115,5 +114,14 @@
         transform: translate(-50%,-50%);
       }
     }
+  }
+}
+@media  only screen and (max-width: 280px)  {
+  .intro-left-wrapper-desc{
+    padding: 0;
+  }
+
+  .intro-left-wrapper{
+    padding: 0px !important;
   }
 }

@@ -130,7 +130,7 @@ function Skills() {
       </div>
 
       <div className="skills-right" ref={pRef}>
-        my work has the following criterias, take a look below.
+        my work has these criterias, take a look below.
       </div>
     </div>
   );

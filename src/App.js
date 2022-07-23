@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import AppContext from "./helpers/AppContext";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
+import Education from "./components/education/Education";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -31,6 +32,7 @@ function App() {
         <Header />
         <About />
         <Projects />
+        <Education/>
         <Contact />
       </AppContext.Provider>
     </div>
