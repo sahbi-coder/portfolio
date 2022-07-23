@@ -20,14 +20,14 @@ function Projects() {
     {
       id: "19f15869ca42ec22e3af68748c358f2e",
       category: "React",
-      name: "google drive colone",
+      name: "Google drive colone",
       img:Images.drive,
       link:"https://github.com/sahbi-coder/google-drive-clone"
     },
     {
       id: "7abb9ed363c90128d0ddd6d9b687e771",
       category: "React/Node.js",
-      name: "e commerce",
+      name: "Ecommerce",
       img:Images.ecommerce,
       link:'https://github.com/sahbi-coder/e-commerce-react'
     },

@@ -141,6 +141,18 @@ function Header() {
               <li className="header-content-nav-link">
                 <Link
                   activeClass="active"
+                  to="education"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  education
+                </Link>
+              </li>
+              <li className="header-content-nav-link">
+                <Link
+                  activeClass="active"
                   to="contact"
                   spy={true}
                   smooth={true}

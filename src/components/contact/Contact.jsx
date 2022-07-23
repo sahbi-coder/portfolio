@@ -8,47 +8,53 @@ import emailjs from "emailjs-com";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AppContext from "../../helpers/AppContext";
+import ReCAPTCHA from "react-google-recaptcha";
 gsap.registerPlugin(ScrollTrigger);
 const Contact = () => {
+  const [verfied, setVerifed] = useState(false);
   const formRef = useRef();
   const contactRef = useRef(null);
   const [done, setDone] = useState(false);
+  const [error, setError] = useState(false);
   const { isMobile } = useContext(AppContext);
+  function onChange(value) {
+    setVerifed(true);
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_mjuvt7h",
-        "template_rorkvgc",
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         formRef.current,
-        "BK8il4Gnc3bSKkeYy"
+        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
       )
       .then(
         (result) => {
-          console.log(result.text);
           setDone(true);
+          setError(false);
         },
         (error) => {
-          console.log(error.text);
+          setDone(false);
+          setError(true);
         }
       );
   };
 
   useEffect(() => {
-  
-      gsap.to(".contact-wrap", { opacity: 0 });
+    gsap.to(".contact-wrap", { opacity: 0 });
 
-      const t = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".projects",
-          start: "center top",
-        },
-      });
+    const t = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".education",
+        start: "center top",
+      },
+    });
 
-      t.to(".contact-wrap", {
-        opacity: 1,
-      });
-    
+    t.to(".contact-wrap", {
+      opacity: 1,
+      duration: 1,
+    });
   }, []);
 
   return (
@@ -101,8 +107,20 @@ const Contact = () => {
               placeholder="Message"
               name="message"
             />
-            <button>Submit</button>
-            {done && "Thank you..."}
+            <button disabled={!verfied}>Submit</button>
+            {done && (
+              <span style={{ color: "green", padding: 2 }}>Thank you..</span>
+            )}
+            {error && (
+              <span style={{ color: "red", padding: 2 }}>
+                oops ! something went wrong...
+              </span>
+            )}
+            <ReCAPTCHA
+              sitekey={process.env.REACT_APP_SITE_KEY}
+              onChange={onChange}
+              style={{ marginTop: 5 }}
+            />
           </form>
         </div>
       </div>

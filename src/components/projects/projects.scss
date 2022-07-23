@@ -47,14 +47,16 @@
           position: absolute;
           height: 100%;
           width: 100%;
-          background-color: transparent;
+       
+          background-color: rgb(89, 178, 86, 0.5) ;
+
         }
 
         .projects-body-grid-item-name {
           text-align: center;
           z-index: 100;
           font-size: 24px;
-          opacity: 0;
+         
           color: white;
         }
 
@@ -88,11 +90,8 @@
         }
       }
       .projects-body-grid-item:hover {
-        .projects-body-grid-item-tranaparent {
-          background: rgb(89, 178, 86, 0.5) !important;
-          opacity: 1;
-        }
-        .projects-body-grid-item-name,
+      
+       
         .projects-body-grid-item-link {
           opacity: 1;
         }
@@ -106,7 +105,7 @@
   }
   .projects-body-grid-item-name {
     z-index: 100 !important;
-    opacity: 0 !important;
+   
    
   }
   .projects-body-grid-item{
@@ -116,4 +115,10 @@
     flex-direction: column;
   }
  
+}
+@media only screen and (max-width: 280px) {
+.projects-body-filter-category{
+  margin: 2px !important;
+  padding: 5px!important;
+}
 }
