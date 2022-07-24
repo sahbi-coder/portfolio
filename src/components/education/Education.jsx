@@ -74,7 +74,7 @@ function Education() {
 
   return (
     <section id="education" className="education">
-      <Title title="Education" titleRef={educationRef} section=".education" />
+      <Title title="EDUCATION" titleRef={educationRef} section=".education" />
       <div className="education-wrap">
         <div className="education-left">
           <div className="education-left-wrapper">
@@ -88,7 +88,7 @@ function Education() {
               </div>
             </div>
             <div className="education-left-wrapper-item" ref={(el) => setItemsRef(el, 1)}>
-              <h3 className="education-left-wrapper-duration">2015 to 2017</h3>
+              <h3 className="education-left-wrapper-duration">2015 to 2017:</h3>
               <div className="education-left-wrapper-degree">
                 pre engineeting studies{" "}
               </div>
