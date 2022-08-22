@@ -5,7 +5,7 @@ const Images = {
 
   ecommerce: require("./cover3.PNG"),
 
-  
+  npm:require('./cover4.PNG'),
 
   me: require("./me.png"),
 };

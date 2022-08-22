@@ -14,24 +14,33 @@ function Projects() {
       id: "66dccd6b45fab529c10583c7eabd974c",
       category: "React",
       name: "Watermark app",
-      img:Images.watermark,
-      link:'https://github.com/sahbi-coder/watermark-app'
+      img: Images.watermark,
+      link: "https://github.com/sahbi-coder/watermark-app",
+      demoLink: " https://sahbi-coder.github.io/watermark-app",
     },
     {
       id: "19f15869ca42ec22e3af68748c358f2e",
       category: "React",
       name: "Google drive colone",
-      img:Images.drive,
-      link:"https://github.com/sahbi-coder/google-drive-clone"
+      img: Images.drive,
+      link: "https://github.com/sahbi-coder/google-drive-clone",
+      demoLink: "https://sahbi-coder.github.io/google-drive-clone",
     },
     {
       id: "7abb9ed363c90128d0ddd6d9b687e771",
       category: "React/Node.js",
       name: "Ecommerce",
-      img:Images.ecommerce,
-      link:'https://github.com/sahbi-coder/e-commerce-react'
+      img: Images.ecommerce,
+      link: "https://github.com/sahbi-coder/e-commerce-react",
     },
-   
+    {
+      id: "7abb9ed363c90128d0dfd6d9b687e771",
+      category: "Node.js",
+      name: "Modbus TCP/IP NPM module",
+      img: Images.npm,
+      link: "https://github.com/sahbi-coder/modbus-tcp-ip-client",
+      demoLink: "https://www.npmjs.com/package/modbus-tcp-ip-client",
+    },
   ];
   const projects = useRef([]);
   const titles = useRef([]);
@@ -68,6 +77,17 @@ function Projects() {
           }, [])
         );
         break;
+      case "Node":
+        setFilteredData(
+          projectsData.reduce((acc, project) => {
+            if (project.category === "Node.js") {
+              acc.push(project);
+              return acc;
+            }
+            return acc;
+          }, [])
+        );
+        break;
       default:
         break;
     }
@@ -94,10 +114,10 @@ function Projects() {
           gsap.fromTo(
             elements,
             { opacity: 0, scale: 0 },
-            { opacity: 1, scale: 1, duration: .5 }
+            { opacity: 1, scale: 1, duration: 0.5 }
           ),
         onLeave: (elements) =>
-          gsap.to(elements, { opacity: 0, scale: 0, duration: .5 }),
+          gsap.to(elements, { opacity: 0, scale: 0, duration: 0.5 }),
       });
     }
   }, [filteredData]);
@@ -109,14 +129,12 @@ function Projects() {
       scrollTrigger: {
         trigger: ".skills",
         start: "bottom center",
-       
       },
     });
     const t2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".skills",
         start: "bottom center",
-       
       },
     });
 
@@ -124,21 +142,19 @@ function Projects() {
       gsap.to(title, {
         x: Math.floor(Math.random() * 500),
         y: Math.floor(Math.random() * 500),
-        
       });
-    projects.current.forEach(function (project, index) {
-      gsap.to(project, {
-        x: Math.floor(Math.random() * 500),
-        y: Math.floor(Math.random() * 500),
-     
+      projects.current.forEach(function (project, index) {
+        gsap.to(project, {
+          x: Math.floor(Math.random() * 500),
+          y: Math.floor(Math.random() * 500),
+        });
       });
-    });
     });
     titles.current.forEach(function (title, index) {
-      t1.to(title, { x: 0, y: 0,duration:.5});
+      t1.to(title, { x: 0, y: 0, duration: 0.5 });
     });
     projects.current.forEach(function (project, index) {
-      t2.to(project, { x: 0, y: 0});
+      t2.to(project, { x: 0, y: 0 });
     });
   }, []);
 
@@ -163,8 +179,24 @@ function Projects() {
 
         <div className="projects-body-grid-item-name">{project.name}</div>
         <div className="projects-body-grid-item-links">
-          {/* <div className="projects-body-grid-item-link">demo</div> */}
-          <div className="projects-body-grid-item-link"><a href={project.link} target="_blank" >code</a></div>
+          <div
+            className="projects-body-grid-item-link"
+            style={{
+              cursor: `${
+                project.name === "Ecommerce" ? "not-allowed" : "pointer"
+              }`,
+            }}
+            title={`${project.name === "Ecommerce" ? "available soon" : ""}`}
+          >
+            <a href={project.demoLink} target="_blank">
+              demo
+            </a>
+          </div>
+          <div className="projects-body-grid-item-link">
+            <a href={project.link} target="_blank">
+              code
+            </a>
+          </div>
         </div>
       </div>
     ));
@@ -175,9 +207,30 @@ function Projects() {
       <Title title="PROJECTS" titleRef={titleRef} section=".projects" />
       <div className="projects-body">
         <div className="projects-body-filter" onClick={filterData}>
-          <div className="projects-body-filter-category"  ref={(el) => setTitlesRef(el, 0)}>All</div>
-          <div className="projects-body-filter-category"  ref={(el) => setTitlesRef(el, 1)}>React</div>
-          <div className="projects-body-filter-category"  ref={(el) => setTitlesRef(el, 2)}>React/Node</div>
+          <div
+            className="projects-body-filter-category"
+            ref={(el) => setTitlesRef(el, 0)}
+          >
+            All
+          </div>
+          <div
+            className="projects-body-filter-category"
+            ref={(el) => setTitlesRef(el, 1)}
+          >
+            React
+          </div>
+          <div
+            className="projects-body-filter-category"
+            ref={(el) => setTitlesRef(el, 2)}
+          >
+            React/Node
+          </div>
+          <div
+            className="projects-body-filter-category"
+            ref={(el) => setTitlesRef(el, 3)}
+          >
+            Node
+          </div>
         </div>
         <div className="projects-body-grid">{renderProjects()}</div>
       </div>

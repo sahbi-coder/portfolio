@@ -8,7 +8,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
-const pdf = require("../../pdf/sahbiKardiCv.pdf");
+const pdf = require("../../pdf/sahbi kardi cv.pdf");
 
 function Education() {
   const educationRef = useRef();
@@ -79,7 +79,7 @@ function Education() {
         <div className="education-left">
           <div className="education-left-wrapper">
             <div className="education-left-wrapper-item" ref={(el) => setItemsRef(el, 0)}>
-              <h3 className="education-left-wrapper-duration">2017 to 2020:</h3>
+              <h3 className="education-left-wrapper-duration">2017 to 2021:</h3>
               <div className="education-left-wrapper-degree">
                 <b>degree: </b>tunisian engineering degree in EE.
               </div>
