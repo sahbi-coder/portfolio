@@ -15,14 +15,15 @@
     width: 70%;
     .projects-body-filter {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
-      width: 80%;
+      
       margin: 10px 0;
+     
       .projects-body-filter-category {
         background-color: #59b256;
         padding: 1px 30px;
-        margin: 0 15px;
+        margin: 2px 15px;
         cursor: pointer;
       }
     }
@@ -113,6 +114,14 @@
   }
   .projects-body-grid {
     flex-direction: column;
+  }
+ 
+}
+@media only screen and (max-width: 480px) {
+  .projects-body-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
  
 }
