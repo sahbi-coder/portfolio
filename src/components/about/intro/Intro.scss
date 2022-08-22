@@ -107,12 +107,13 @@
       overflow: hidden;
       .intro-img {
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
         position: absolute;
         top:50%;
         left:50%;
         transform: translate(-50%,-50%);
       }
+     
     }
   }
 }
