@@ -151,10 +151,10 @@ function Projects() {
       });
     });
     titles.current.forEach(function (title, index) {
-      t1.to(title, { x: 0, y: 0, duration: 0.5 });
+      t1.to(title, { x: 0, y: 0});
     });
     projects.current.forEach(function (project, index) {
-      t2.to(project, { x: 0, y: 0 });
+      t2.to(project, { x: 0, y: 0});
     });
   }, []);
 
