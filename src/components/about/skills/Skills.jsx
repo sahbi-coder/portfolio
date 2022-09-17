@@ -51,13 +51,13 @@ function Skills() {
     if (count) {
       if (isMobile) {
         itemsRef.current.forEach((ref) => {
-          t1.to(ref, { x: 0 });
+          t1.to(ref, { x: 0});
         });
 
         t2.to(pRef.current, { opacity: 1,duration:2 });
       } else {
         itemsRef.current.forEach((ref) => {
-          t1.to(ref, { x: 0});
+          t1.to(ref, { x: 0,duration:.5});
         });
 
         t3.to(pRef.current, { opacity: 1,duration:2 });
