@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.94e94e33.css",
-    "main.js": "/static/js/main.c96d4155.js",
+    "main.js": "/static/js/main.1579abc2.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/cover3.PNG": "/static/media/cover3.b63c04d51af0303f4214.PNG",
     "static/media/sahbi kardi cv.pdf": "/static/media/sahbi kardi cv.0468ffbddbbc13e11aba.pdf",
@@ -11,11 +11,11 @@
     "static/media/cover2.PNG": "/static/media/cover2.19fe483de1405a4bffe7.PNG",
     "index.html": "/index.html",
     "main.94e94e33.css.map": "/static/css/main.94e94e33.css.map",
-    "main.c96d4155.js.map": "/static/js/main.c96d4155.js.map",
+    "main.1579abc2.js.map": "/static/js/main.1579abc2.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.94e94e33.css",
-    "static/js/main.c96d4155.js"
+    "static/js/main.1579abc2.js"
   ]
 }
