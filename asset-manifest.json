@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.94e94e33.css",
-    "main.js": "/static/js/main.fcd8e70b.js",
-    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
-    "static/media/sahbi kardi cv.pdf": "/static/media/sahbi kardi cv.0468ffbddbbc13e11aba.pdf",
-    "static/media/cover1.PNG": "/static/media/cover1.1534983503339f7e4440.PNG",
-    "static/media/cover3.PNG": "/static/media/cover3.1bab7c9d2aee223af7ea.PNG",
-    "static/media/me.png": "/static/media/me.b33566b33e3269906699.png",
-    "static/media/cover4.PNG": "/static/media/cover4.4e1e2e6c6063a7cc3f40.PNG",
-    "static/media/cover2.PNG": "/static/media/cover2.19fe483de1405a4bffe7.PNG",
-    "index.html": "/index.html",
-    "main.94e94e33.css.map": "/static/css/main.94e94e33.css.map",
-    "main.fcd8e70b.js.map": "/static/js/main.fcd8e70b.js.map",
-    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/portfolio/static/css/main.94e94e33.css",
+    "main.js": "/portfolio/static/js/main.fcf94511.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/sahbi kardi cv.pdf": "/portfolio/static/media/sahbi kardi cv.0468ffbddbbc13e11aba.pdf",
+    "static/media/cover1.PNG": "/portfolio/static/media/cover1.1534983503339f7e4440.PNG",
+    "static/media/cover3.PNG": "/portfolio/static/media/cover3.1bab7c9d2aee223af7ea.PNG",
+    "static/media/me.png": "/portfolio/static/media/me.b33566b33e3269906699.png",
+    "static/media/cover4.PNG": "/portfolio/static/media/cover4.4e1e2e6c6063a7cc3f40.PNG",
+    "static/media/cover2.PNG": "/portfolio/static/media/cover2.19fe483de1405a4bffe7.PNG",
+    "index.html": "/portfolio/index.html",
+    "main.94e94e33.css.map": "/portfolio/static/css/main.94e94e33.css.map",
+    "main.fcf94511.js.map": "/portfolio/static/js/main.fcf94511.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.94e94e33.css",
-    "static/js/main.fcd8e70b.js"
+    "static/js/main.fcf94511.js"
   ]
 }
