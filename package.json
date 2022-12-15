@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://sahbi-coder.github.io/portfolio",
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,7 +14,6 @@
     "@testing-library/user-event": "^13.5.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^6.3.1",
-    "gh-pages": "^4.0.0",
     "gsap": "^3.9.1",
     "mdi-react": "^8.2.0",
     "react": "^17.0.2",

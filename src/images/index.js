@@ -3,7 +3,7 @@ const Images = {
 
   drive: require("./cover2.PNG"),
 
-  ecommerce: require("./cover3.PNG"),
+  freelance: require("./cover3.PNG"),
 
   npm:require('./cover4.PNG'),
 

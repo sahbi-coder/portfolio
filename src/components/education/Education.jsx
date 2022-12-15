@@ -8,7 +8,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
-const pdf = require("../../pdf/sahbi kardi cv.pdf");
+const pdf = require("../../pdf/resume-sahbi-kardi.pdf");
 
 function Education() {
   const educationRef = useRef();
