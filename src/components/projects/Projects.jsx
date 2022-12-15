@@ -29,9 +29,10 @@ function Projects() {
     {
       id: "7abb9ed363c90128d0ddd6d9b687e771",
       category: "React/Node.js",
-      name: "Ecommerce",
-      img: Images.ecommerce,
-      link: "https://github.com/sahbi-coder/e-commerce-react",
+      name: "freelance work",
+      img: Images.freelance,
+      link: "https://github.com/sahbi-coder/freelance-portfolio",
+      demoLink: "https://oussamajedda.com",
     },
     {
       id: "7abb9ed363c90128d0dfd6d9b687e771",
@@ -125,36 +126,46 @@ function Projects() {
     setIsMounted(true);
   }, []);
   useEffect(() => {
-    const t1 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".skills",
-        start: "bottom center",
-      },
+    const titlesTimelines = [];
+    const projectsTimelines = [];
+
+    titles.current.forEach(() => {
+      titlesTimelines.push(
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: ".skills",
+            start: "bottom center",
+          },
+        })
+      );
     });
-    const t2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".skills",
-        start: "bottom center",
-      },
+
+    projects.current.forEach(() => {
+      projectsTimelines.push(
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: ".skills",
+            start: "bottom center",
+          },
+        })
+      );
     });
 
     titles.current.forEach(function (title, index) {
       gsap.to(title, {
-        x: Math.floor(Math.random() * 500),
-        y: Math.floor(Math.random() * 500),
+        x: Math.floor(Math.random() * 900) * Math.pow(-1, index),
       });
       projects.current.forEach(function (project, index) {
         gsap.to(project, {
-          x: Math.floor(Math.random() * 500),
-          y: Math.floor(Math.random() * 500),
+          x: Math.floor(Math.random() * 900) * Math.pow(-1, index),
         });
       });
     });
     titles.current.forEach(function (title, index) {
-      t1.to(title, { x: 0, y: 0});
+      titlesTimelines[index].to(title, { x: 0, duration: 1 });
     });
     projects.current.forEach(function (project, index) {
-      t2.to(project, { x: 0, y: 0});
+      projectsTimelines[index].to(project, { x: 0, duration: 1 });
     });
   }, []);
 
@@ -181,12 +192,12 @@ function Projects() {
         <div className="projects-body-grid-item-links">
           <div
             className="projects-body-grid-item-link"
-            style={{
-              cursor: `${
-                project.name === "Ecommerce" ? "not-allowed" : "pointer"
-              }`,
-            }}
-            title={`${project.name === "Ecommerce" ? "available soon" : ""}`}
+            // style={{
+            //   cursor: `${
+            //     project.name === "Ecommerce" ? "not-allowed" : "pointer"
+            //   }`,
+            // }}
+            title={`${project.name === "freelance work" ? "available soon" : ""}`}
           >
             <a href={project.demoLink} target="_blank">
               demo

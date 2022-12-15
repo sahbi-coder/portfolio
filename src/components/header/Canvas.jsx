@@ -10,25 +10,21 @@ function Canvas() {
     let colors = ["#8ad633", "#FFF578", "#59b256", "#37A9CC", "#188EB2"];
 
     function init() {
-      if(window.createjs){
-      initStages();
+      if (window.createjs) {
+        initStages();
 
-      initCircles();
-      animate();
-     }
-     
+        initCircles();
+        animate();
+      }
     }
     function reset() {
       cancelAnimationFrame(animationId);
       init();
     }
-function initStages() {
-     
-
-        stage = new window.createjs.Stage("stage");
-        stage.canvas.width = window.innerWidth;
-        stage.canvas.height = window.innerHeight;
-        
+    function initStages() {
+      stage = new window.createjs.Stage("stage");
+      stage.canvas.width = window.innerWidth;
+      stage.canvas.height = window.innerHeight;
     }
 
     function initCircles() {
