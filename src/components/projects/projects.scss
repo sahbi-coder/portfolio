@@ -33,10 +33,12 @@
       align-items: center;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
 
       .projects-body-grid-item {
         height: 250px;
-        width: 250px;
+        min-width: 250px;
+        flex:1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -111,6 +113,8 @@
   }
   .projects-body-grid-item{
     margin: 8px;
+    width:300px;
+    max-width: 100%;
   }
   .projects-body-grid {
     flex-direction: column;

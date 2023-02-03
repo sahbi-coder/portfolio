@@ -16,7 +16,7 @@ function Projects() {
       name: "Watermark app",
       img: Images.watermark,
       link: "https://github.com/sahbi-coder/watermark-app",
-      demoLink: " https://sahbi-coder.github.io/watermark-app",
+      demoLink: "https://watermark-app.vercel.app/",
     },
     {
       id: "19f15869ca42ec22e3af68748c358f2e",
@@ -35,12 +35,28 @@ function Projects() {
       demoLink: "https://oussamajedda.com",
     },
     {
+      id: "7abb9ed363c90128d0dfd6d9b687e772",
+      category: "React",
+      name: "Little Home Page",
+      img: Images.homePage,
+      link: "https://github.com/sahbi-coder/test-integration",
+      demoLink: "https://demo-project-flame.vercel.app/",
+    },
+    {
       id: "7abb9ed363c90128d0dfd6d9b687e771",
       category: "Node.js",
       name: "Modbus TCP/IP NPM module",
       img: Images.npm,
       link: "https://github.com/sahbi-coder/modbus-tcp-ip-client",
       demoLink: "https://www.npmjs.com/package/modbus-tcp-ip-client",
+    },
+    {
+      id: "7abb9ed363c90128d0dfd6d9b687e773",
+      category: "React/Node.js",
+      name: "Demo Ecommerce Website",
+      img: Images.eCommerce,
+      link: "https://github.com/sahbi-coder/e-commerce-react",
+      demoLink: "https://react-ecommerce-steel-gamma.vercel.app/",
     },
   ];
   const projects = useRef([]);
@@ -162,12 +178,10 @@ function Projects() {
       });
     });
     titles.current.forEach(function (title, index) {
-
       titlesTimelines[index].to(title, { x: 0, duration: 1 });
     });
     projects.current.forEach(function (project, index) {
       projectsTimelines[index].to(project, { x: 0, duration: 1 });
-
     });
   }, []);
 
@@ -199,7 +213,9 @@ function Projects() {
             //     project.name === "Ecommerce" ? "not-allowed" : "pointer"
             //   }`,
             // }}
-            title={`${project.name === "freelance work" ? "available soon" : ""}`}
+            title={`${
+              project.name === "freelance work" ? "available soon" : ""
+            }`}
           >
             <a href={project.demoLink} target="_blank">
               demo

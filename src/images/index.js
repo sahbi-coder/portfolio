@@ -5,8 +5,12 @@ const Images = {
 
   freelance: require("./cover3.PNG"),
 
-  npm:require('./cover4.PNG'),
+  npm: require("./cover4.PNG"),
 
   me: require("./me.png"),
+
+  eCommerce: require("./cover6.PNG"),
+  
+  homePage: require("./cover5.PNG"),
 };
 export default Images;

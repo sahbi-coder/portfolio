@@ -100,7 +100,7 @@ function Header() {
             navIsFixedTop ? "sticky" : "bottom"
           } ${navIsHidden ? "hidden" : ""}`}
         >
-          <div className="header-content-nav-container">
+         
             <ul className="header-content-nav-wrap" ref={navWrapRef}>
               <li className=" header-content-nav-link">
                 <Link
@@ -111,7 +111,7 @@ function Header() {
                   offset={0}
                   duration={500}
                 >
-                  home{" "}
+                  Home{" "}
                 </Link>
               </li>
               <li className="header-content-nav-link">
@@ -123,7 +123,7 @@ function Header() {
                   offset={0}
                   duration={500}
                 >
-                  about
+                  About
                 </Link>
               </li>
               <li className="header-content-nav-link">
@@ -135,7 +135,7 @@ function Header() {
                   offset={0}
                   duration={500}
                 >
-                  portfolio
+                  Portfolio
                 </Link>
               </li>
               <li className="header-content-nav-link">
@@ -147,7 +147,7 @@ function Header() {
                   offset={0}
                   duration={500}
                 >
-                  education
+                  Education
                 </Link>
               </li>
               <li className="header-content-nav-link">
@@ -159,7 +159,7 @@ function Header() {
                   offset={0}
                   duration={500}
                 >
-                  contact
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -167,7 +167,7 @@ function Header() {
               {" "}
               <FontAwesomeIcon icon={faBars} onClick={toggleNav} />
             </div>
-          </div>
+        
         </nav>
       </div>
     </section>
