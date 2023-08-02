@@ -111,7 +111,7 @@ function Education() {
             onClick={() => {
               window.open("https://ipeim.rnu.tn", "_blank");
             }}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer",fontWeight:'bold',fontSize:'larger' }}
             ref={(el) => setLinksRef(el, 0)}
           >
             IPEIM
@@ -122,7 +122,7 @@ function Education() {
             onClick={() => {
               window.open("http://www.ensit.tn/", "_blank");
             }}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer",fontWeight:'bold',fontSize:'larger' }}
             ref={(el) => setLinksRef(el, 1)}
           >
             ENSIT

@@ -42,14 +42,7 @@ function Projects() {
       link: "https://github.com/sahbi-coder/test-integration",
       demoLink: "https://demo-project-flame.vercel.app/",
     },
-    {
-      id: "7abb9ed363c90128d0dfd6d9b687e771",
-      category: "Node.js",
-      name: "Modbus TCP/IP NPM module",
-      img: Images.npm,
-      link: "https://github.com/sahbi-coder/modbus-tcp-ip-client",
-      demoLink: "https://www.npmjs.com/package/modbus-tcp-ip-client",
-    },
+
     {
       id: "7abb9ed363c90128d0dfd6d9b687e773",
       category: "React/Node.js",
@@ -94,17 +87,17 @@ function Projects() {
           }, [])
         );
         break;
-      case "Node":
-        setFilteredData(
-          projectsData.reduce((acc, project) => {
-            if (project.category === "Node.js") {
-              acc.push(project);
-              return acc;
-            }
-            return acc;
-          }, [])
-        );
-        break;
+      // case "Node":
+      //   setFilteredData(
+      //     projectsData.reduce((acc, project) => {
+      //       if (project.category === "Node.js") {
+      //         acc.push(project);
+      //         return acc;
+      //       }
+      //       return acc;
+      //     }, [])
+      //   );
+      //   break;
       default:
         break;
     }

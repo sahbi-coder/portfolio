@@ -1,5 +1,4 @@
 .contact-wrap {
-  
   display: flex;
   width: 100vw;
   height: 90vh;
@@ -55,7 +54,7 @@
 }
 
 .contact-desc {
-  font-weight: 200;
+  font-weight: 400;
   width: 100%;
   text-align: start;
 }
@@ -85,11 +84,11 @@ button {
   padding: 15px;
   background-color: #59b256;
   color: white;
-  font-weight: 500;
+  font-size: large;
+  font-weight: bold;
   cursor: pointer;
- 
 }
-button:disabled{
+button:disabled {
   cursor: not-allowed;
 }
 
@@ -101,6 +100,9 @@ button:disabled{
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+  .contact-desc {
+    padding: 10px;
   }
   .contact-title {
     width: 100%;
@@ -128,5 +130,3 @@ button:disabled{
     text-align: center;
   }
 }
-
-

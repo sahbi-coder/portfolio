@@ -107,7 +107,10 @@ const Contact = () => {
               placeholder="Message"
               name="message"
             />
+            <div>
+
             <button disabled={!verfied}>Submit</button>
+            </div>
             {done && (
               <span style={{ color: "green", padding: 2 }}>Thank you..</span>
             )}
