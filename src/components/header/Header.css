@@ -75,7 +75,7 @@
 }
 .header-content-nav-bars--wrap {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   padding: 0 15px;
   opacity: 0;
@@ -106,7 +106,7 @@
     display: flex;
     opacity: 1;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     height: 50px;
   }
   .header-content-nav-wrap {

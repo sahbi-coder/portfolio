@@ -1,6 +1,6 @@
 .projects {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   min-height: 80vh;
@@ -9,7 +9,7 @@
     padding: 10px;
 
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     width: 70%;

@@ -29,13 +29,13 @@
   font-size: 50px;
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 20px;
 }
 .contact-info {
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding: 20px;
 }
