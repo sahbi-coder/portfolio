@@ -247,12 +247,7 @@ function Projects() {
           >
             React/Node
           </div>
-          <div
-            className="projects-body-filter-category"
-            ref={(el) => setTitlesRef(el, 3)}
-          >
-            Node
-          </div>
+       
         </div>
         <div className="projects-body-grid">{renderProjects()}</div>
       </div>
